@@ -26,6 +26,6 @@ public class SystemUserDaoTest {
         Assert.assertNotNull(privilegeSet);
 
         SystemUserDao.getInstance().save(systemUser);
-//        SystemUserDao.getInstance().delete(systemUser);
+        SystemUserDao.getInstance().delete(systemUser);
     }
 }

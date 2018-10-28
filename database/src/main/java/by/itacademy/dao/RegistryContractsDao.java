@@ -1,39 +1,40 @@
 package by.itacademy.dao;
 
 import by.itacademy.connection.ConnectionPool;
-import by.itacademy.model.Debitors;
+import by.itacademy.model.RegistryOfContracts;
 import org.hibernate.Session;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class DebitorsDao {
-    private static final DebitorsDao INSTANCE = new DebitorsDao();
+public class RegistryContractsDao {
+    private static final RegistryContractsDao INSTANCE = new RegistryContractsDao();
 
-    public static DebitorsDao getInstance() {
+    public static by.itacademy.dao.RegistryContractsDao getInstance() {
         return INSTANCE;
     }
 
-    public Long save(Debitors debitors) {
+    public Long save(RegistryOfContracts registry) {
         Session currentSession = ConnectionPool.getInstance().getConnection();
         currentSession.beginTransaction();
-        Serializable id = currentSession.save(debitors);
+        Serializable id = currentSession.save(registry);
         currentSession.getTransaction().commit();
         currentSession.close();
         return (Long) id;
     }
 
-    public List<Debitors> findAll() {
+    public List<RegistryOfContracts> findAll() {
         Session currentSession = ConnectionPool.getInstance().getConnection();
-        List<Debitors> debitorsList = currentSession.createQuery("select d from Debitors d", Debitors.class).list();
+        List<RegistryOfContracts> registry = currentSession.createQuery("select r from RegistryOfContracts r",
+                RegistryOfContracts.class).list();
         currentSession.close();
-        return debitorsList;
+        return registry;
     }
 
-    public void delete(Debitors debitors) {
+    public void delete(RegistryOfContracts registry) {
         Session session = ConnectionPool.getInstance().getConnection();
         session.beginTransaction();
-        session.delete(debitors);
+        session.delete(registry);
         session.getTransaction().commit();
         session.close();
     }

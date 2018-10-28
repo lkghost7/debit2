@@ -48,20 +48,4 @@ public class Debitors extends BaseEntity {
     @Column(name = " redemption_measures")
     private String redemptionMeasures;
 
-    public Debitors(String subdivisions, String debitor,
-                    String dateOfOccurrence, String principalAmount,
-                    String sentDate, String amountClaimed, String date_of_debit,
-                    String redemptionAmount, String balanceOwed,
-                    String redemptionMeasures) {
-        this.subdivisions = subdivisions;
-        this.debitor = debitor;
-        this.dateOfOccurrence = dateOfOccurrence;
-        this.principalAmount = principalAmount;
-        this.sentDate = sentDate;
-        this.amountClaimed = amountClaimed;
-        this.date_of_debit = date_of_debit;
-        this.redemptionAmount = redemptionAmount;
-        this.balanceOwed = balanceOwed;
-        this.redemptionMeasures = redemptionMeasures;
-    }
 }
