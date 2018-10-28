@@ -1,3 +1,4 @@
+-- we don't know how to generate database hibernate (class Database) :(
 create table if not exists system_users
 (
   id serial not null
@@ -44,8 +45,8 @@ create table if not exists registry_of_contracts
   primary key,
   number_of_contract varchar(200),
   name_of_counterparty varchar(200),
-  conclusion_date date,
-  validity_date date,
+  conclusion_date varchar(200),
+  validity_date varchar(200),
   subject_contract varchar(200),
   amount_contract varchar(200),
   settlement_procedure varchar(200),
@@ -63,7 +64,7 @@ create table if not exists debitors
   debitor varchar(200),
   date_of_occurrence varchar(200),
   principal_amount varchar(200),
-  sent_date date,
+  sent_date varchar(200),
   amount_claimed varchar(200),
   date_of_debit varchar(200),
   redemption_amount varchar(200),
