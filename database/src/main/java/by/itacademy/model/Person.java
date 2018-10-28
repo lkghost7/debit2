@@ -3,6 +3,7 @@ package by.itacademy.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -13,8 +14,13 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 @ToString
 public class Person extends BaseEntity{
+
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "contact_id")
-    private Contact contactId;
+
+    private String famaly;
+
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id")
+    private Company company;
 }
+

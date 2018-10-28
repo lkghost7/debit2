@@ -20,6 +20,8 @@
     <mapping class="by.itacademy.model.Address"/>
     <mapping class="by.itacademy.model.RegistryOfContracts"/>
     <mapping class="by.itacademy.model.Debitors"/>
+    <mapping class="by.itacademy.model.Company"/>
+    <mapping class="by.itacademy.model.Person"/>
 
 
     <!-- DB schema will be updated if needed -->
