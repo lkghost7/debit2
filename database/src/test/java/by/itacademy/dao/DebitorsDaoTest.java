@@ -15,7 +15,6 @@ public class DebitorsDaoTest {
         debitors.setDateOfOccurrence("test3");
         debitors.setPrincipalAmount("test4");
         debitors.setSentDate("data");
-
         DebitorsDao.getInstance().save(debitors);
         DebitorsDao.getInstance().delete(debitors);
     }
