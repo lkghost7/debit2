@@ -9,9 +9,9 @@
 <div>
     <p>Username: </p>
     <ul >
-    <c:forEach items="${requestScope.debitorsList}" var="debitorsList">
+    <c:forEach items="${requestScope.debitorList}" var="debitorList">
             <li>
-                    ${debitorsList.subdivisions}
+                    ${debitorList.subdivisions}
             </li>
     </c:forEach>
 

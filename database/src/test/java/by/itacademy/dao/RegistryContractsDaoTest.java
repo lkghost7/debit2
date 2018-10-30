@@ -1,6 +1,6 @@
 package by.itacademy.dao;
 
-import by.itacademy.model.RegistryOfContracts;
+import by.itacademy.model.RegistryOfContract;
 import org.junit.Test;
 import java.util.List;
 
@@ -8,18 +8,18 @@ public class RegistryContractsDaoTest {
 
     @Test
     public void save() {
-        RegistryOfContracts registryOfContracts = new RegistryOfContracts();
-        registryOfContracts.setNameOfCounterparty("test1");
-        registryOfContracts.setNameOfCounterparty("test2");
-        registryOfContracts.setConclusionDate("data");
+        RegistryOfContract registryOfContract = new RegistryOfContract();
+        registryOfContract.setNameOfCounterparty("test1");
+        registryOfContract.setNameOfCounterparty("test2");
+        registryOfContract.setConclusionDate("data");
 
-        RegistryContractsDao.getInstance().save(registryOfContracts);
-        RegistryContractsDao.getInstance().delete(registryOfContracts);
+        RegistryContractsDao.getInstance().save(registryOfContract);
+        RegistryContractsDao.getInstance().delete(registryOfContract);
     }
 
     @Test
     public void findAll() {
-        List<RegistryOfContracts> list = RegistryContractsDao.getInstance().findAll();
+        List<RegistryOfContract> list = RegistryContractsDao.getInstance().findAll();
         list.forEach(System.out::println);
     }
 }

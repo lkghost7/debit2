@@ -1,6 +1,9 @@
 package by.itacademy.dao;
 
+import by.itacademy.model.Company;
+import by.itacademy.model.EmailDetail;
 import by.itacademy.model.Person;
+import org.junit.Assert;
 import org.junit.Test;
 public class PersonDaoTest {
 
@@ -9,7 +12,11 @@ public class PersonDaoTest {
         Person person = new Person();
         person.setName("ваня");
         person.setFamaly("Мванко");
-
-//        ConnectionPool.getInstance().getConnection().find()
+        Company company = CompanyDao.getInstance().findById(1L);
+        EmailDetail emailDetail = EmailDetailDao.getInstance().findById(1L);
+        Assert.assertNotNull(company);
+        person.setCompany(company);
+        person.setEmailDetail(emailDetail);
+        PersonDao.getInstance().save(person);
     }
 }

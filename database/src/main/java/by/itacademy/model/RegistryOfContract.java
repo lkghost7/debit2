@@ -12,10 +12,10 @@ import javax.persistence.Table;
 @Setter
 @Getter
 @Entity
-@Table(name = "registry_of_contracts")
+@Table(name = "registry_of_contract")
 @NoArgsConstructor
 @ToString
-public class RegistryOfContracts extends BaseEntity{
+public class RegistryOfContract extends BaseEntity{
 
 
     @Column(name = "number_of_contract")

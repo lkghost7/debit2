@@ -1,7 +1,7 @@
 package by.itacademy.dao;
 
 import by.itacademy.connection.ConnectionPool;
-import by.itacademy.model.Debitors;
+import by.itacademy.model.Debitor;
 import org.hibernate.Session;
 
 import java.io.Serializable;
@@ -22,26 +22,26 @@ public class DebitorsDao {
         return INSTANCE;
     }
 
-    public Long save(Debitors debitors) {
+    public Long save(Debitor debitor) {
         Session currentSession = ConnectionPool.getInstance().getConnection();
         currentSession.beginTransaction();
-        Serializable id = currentSession.save(debitors);
+        Serializable id = currentSession.save(debitor);
         currentSession.getTransaction().commit();
         currentSession.close();
         return (Long) id;
     }
 
-    public List<Debitors> findAll() {
+    public List<Debitor> findAll() {
         Session currentSession = ConnectionPool.getInstance().getConnection();
-        List<Debitors> debitorsList = currentSession.createQuery("select d from Debitors d", Debitors.class).list();
+        List<Debitor> debitorList = currentSession.createQuery("select d from Debitor d", Debitor.class).list();
         currentSession.close();
-        return debitorsList;
+        return debitorList;
     }
 
-    public void delete(Debitors debitors) {
+    public void delete(Debitor debitor) {
         Session session = ConnectionPool.getInstance().getConnection();
         session.beginTransaction();
-        session.delete(debitors);
+        session.delete(debitor);
         session.getTransaction().commit();
         session.close();
     }

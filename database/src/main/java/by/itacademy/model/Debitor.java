@@ -13,10 +13,10 @@ import javax.persistence.Table;
 @Setter
 @Getter
 @Entity
-@Table(name = "debitors")
+@Table(name = "debitor")
 @NoArgsConstructor
 @ToString
-public class Debitors extends BaseEntity {
+public class Debitor extends BaseEntity {
 
     @Column(name = "subdivisions")
     private String subdivisions;

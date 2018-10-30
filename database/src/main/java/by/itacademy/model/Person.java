@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "person")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
@@ -20,8 +21,9 @@ public class Person extends BaseEntity{
     @JoinColumn(name = "company_id")
     private Company company;
 
+    @OneToOne
+    @JoinColumn(name = "email_detail_id")
+    private EmailDetail emailDetail ;
 
-//    @OneToOne(mappedBy = "person")
-//    private PersonEmail personEmail;
 }
 

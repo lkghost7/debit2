@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "privileges")
+@Table(name = "privilege")
 
 @NoArgsConstructor
 public class Privilege extends BaseEntity {

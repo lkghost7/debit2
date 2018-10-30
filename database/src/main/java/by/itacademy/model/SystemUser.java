@@ -10,7 +10,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Table(name = "system_users")
+@Table(name = "system_user")
 @NoArgsConstructor
 @ToString
 public class SystemUser extends BaseEntity {
@@ -29,7 +29,7 @@ public class SystemUser extends BaseEntity {
     @Column(name = "password", nullable=false)
     private String passwordUser;
 
-     @JoinTable(name = "users_privileges",
+     @JoinTable(name = "users_privilege",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "privilege_id"))
     @ManyToMany(fetch = FetchType.EAGER)
