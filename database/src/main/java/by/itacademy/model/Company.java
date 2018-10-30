@@ -10,9 +10,9 @@ import java.util.Set;
 @Table (name = "company")
 @Setter
 @Getter
-@ToString
+@ToString (exclude = "person")
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 public class Company extends BaseEntity{
 
     private String name;
