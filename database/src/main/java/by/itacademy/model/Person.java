@@ -20,7 +20,8 @@ public class Person extends BaseEntity{
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @OneToOne(mappedBy = "person")
-    private PersonEmail personEmail;
+
+//    @OneToOne(mappedBy = "person")
+//    private PersonEmail personEmail;
 }
 

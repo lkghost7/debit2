@@ -8,9 +8,17 @@ import java.io.Serializable;
 import java.util.List;
 
 public class DebitorsDao {
-    private static final DebitorsDao INSTANCE = new DebitorsDao();
+    private static final Object LOCK = new Object();
+    private static DebitorsDao INSTANCE = null;
 
     public static DebitorsDao getInstance() {
+        if (INSTANCE == null) {
+            synchronized (LOCK) {
+                if (INSTANCE == null) {
+                    INSTANCE = new DebitorsDao();
+                }
+            }
+        }
         return INSTANCE;
     }
 

@@ -4,7 +4,6 @@ import by.itacademy.model.Privilege;
 import by.itacademy.model.SystemUser;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,7 +24,22 @@ public class SystemUserDaoTest {
         privilegeSet.add(privilege2);
         Assert.assertNotNull(privilegeSet);
 
-        SystemUserDao.getInstance().save(systemUser);
-        SystemUserDao.getInstance().delete(systemUser);
+        Long id = SystemUserDao.getInstance().save(systemUser);
+        Assert.assertNotNull(id);
+        SystemUserDao.getInstance().delete(id);
+    }
+
+    @Test
+    public void findById() {
+        SystemUser systemUser = new SystemUser();
+        systemUser.setId(100L);
+        systemUser.setEmail("lk@i.ua");
+        systemUser.setPasswordUser("222");
+        systemUser.setFamilyUser("Зыскунов");
+        Long id = SystemUserDao.getInstance().save(systemUser);
+        SystemUser systemUserFromDb = SystemUserDao.getInstance().findById(id);
+        System.out.println(systemUserFromDb);
+        SystemUserDao.getInstance().delete(id);
+
     }
 }

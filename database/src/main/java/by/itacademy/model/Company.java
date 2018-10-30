@@ -12,7 +12,7 @@ import java.util.Set;
 @Getter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 public class Company extends BaseEntity{
 
     private String name;

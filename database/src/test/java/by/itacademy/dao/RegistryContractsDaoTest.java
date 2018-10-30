@@ -2,7 +2,6 @@ package by.itacademy.dao;
 
 import by.itacademy.model.RegistryOfContracts;
 import org.junit.Test;
-
 import java.util.List;
 
 public class RegistryContractsDaoTest {
