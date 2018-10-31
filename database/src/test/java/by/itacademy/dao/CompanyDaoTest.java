@@ -10,7 +10,7 @@ public class CompanyDaoTest {
 
     @Test
     public void findById() {
-        Company name = CompanyDao.getInstance().findById(1L);
+        Company name = CompanyDao.getInstance().findById(2L);
         Assert.assertEquals(name.getName(), "БТЛЦ");
     }
 
