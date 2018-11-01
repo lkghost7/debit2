@@ -8,6 +8,7 @@ public class BaseDaoImpl<T extends BaseEntity> implements BaseDao<T> {
 
     private final Class<T> modelCalss;
 
+
     public BaseDaoImpl(Class<T> modelClass) {
         this.modelCalss = modelClass;
     }
