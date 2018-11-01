@@ -14,7 +14,6 @@ public class PersonDaoTest {
         person.setFamaly("Мванко");
         Company company = CompanyDao.getInstance().findById(1L);
         EmailDetail emailDetail = EmailDetailDao.getInstance().findById(1L);
-        Assert.assertNotNull(company);
         person.setCompany(company);
         person.setEmailDetail(emailDetail);
         PersonDao.getInstance().save(person);
