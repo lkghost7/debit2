@@ -1,6 +1,7 @@
-package by.itacademy.dao;
+package by.itacademy.dao.generic;
 
 import by.itacademy.connection.ConnectionPool;
+import by.itacademy.dao.generic.BaseDao;
 import by.itacademy.model.BaseEntity;
 import org.hibernate.Session;
 

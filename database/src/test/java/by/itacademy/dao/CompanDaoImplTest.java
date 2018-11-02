@@ -1,11 +1,11 @@
 package by.itacademy.dao;
 
+import by.itacademy.dao.generic.BaseDao;
+import by.itacademy.dao.generic.BaseDaoTest;
+import by.itacademy.dao.generic.CompanDaoImpl;
 import by.itacademy.model.Company;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class CompanDaoImplTest extends  BaseDaoTest<Company> {
+public class CompanDaoImplTest extends BaseDaoTest<Company> {
 
 //    @Test
 //    public void save() {

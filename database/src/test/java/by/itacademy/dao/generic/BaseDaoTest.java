@@ -1,4 +1,4 @@
-package by.itacademy.dao;
+package by.itacademy.dao.generic;
 
 import by.itacademy.model.BaseEntity;
 import org.junit.Test;
