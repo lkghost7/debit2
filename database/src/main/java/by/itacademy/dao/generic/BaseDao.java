@@ -6,4 +6,5 @@ public interface BaseDao <T extends BaseEntity> {
 
     void save(T entity);
 
+
 }
