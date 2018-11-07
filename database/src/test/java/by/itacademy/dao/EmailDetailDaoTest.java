@@ -1,6 +1,7 @@
 package by.itacademy.dao;
 
 import by.itacademy.model.EmailDetail;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class EmailDetailDaoTest {
     @Test
     public void findAll() {
         List<EmailDetail> emailDetailList = EmailDetailDao.getInstance().findAll();
-        emailDetailList.forEach(System.out::println);
+        Assert.assertNotNull(emailDetailList);
     }
 
     @Test

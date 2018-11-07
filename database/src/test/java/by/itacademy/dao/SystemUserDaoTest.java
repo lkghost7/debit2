@@ -41,6 +41,5 @@ public class SystemUserDaoTest {
         SystemUser systemUserFromDb = SystemUserDao.getInstance().findById(id);
         System.out.println(systemUserFromDb);
         SystemUserDao.getInstance().delete(id);
-
     }
 }

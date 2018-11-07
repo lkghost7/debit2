@@ -1,6 +1,7 @@
 package by.itacademy.dao;
 
 import by.itacademy.model.RegistryOfContract;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class RegistryContractsDaoTest {
     @Test
     public void findAll() {
         List<RegistryOfContract> list = RegistryContractsDao.getInstance().findAll();
-        list.forEach(System.out::println);
+        Assert.assertNotNull(list);
+
     }
 }
