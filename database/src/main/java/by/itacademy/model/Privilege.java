@@ -20,6 +20,7 @@ public class Privilege extends BaseEntity {
         super(id);
     }
 
+
     public Privilege(Long id, String namePrivilege) {
         super(id);
         this.namePrivilege = namePrivilege;
