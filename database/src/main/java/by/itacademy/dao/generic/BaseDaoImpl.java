@@ -20,6 +20,7 @@ public class BaseDaoImpl<T extends BaseEntity> implements BaseDao<T> {
         session.beginTransaction();
         session.save(entity);
         session.getTransaction().commit();
+
         session.close();
 
     }
