@@ -29,7 +29,7 @@ public class SystemUser extends BaseEntity {
     @Column(name = "password", nullable=false)
     private String passwordUser;
 
-     @JoinTable(name = "users_privilege",
+    @JoinTable(name = "users_privilege",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "privilege_id"))
     @ManyToMany(fetch = FetchType.EAGER)

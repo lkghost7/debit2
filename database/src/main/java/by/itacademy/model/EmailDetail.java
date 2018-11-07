@@ -13,5 +13,5 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class EmailDetail extends BaseEntity {
     @Column(name = "name")
-     private String email;
+    private String email;
 }

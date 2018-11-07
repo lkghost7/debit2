@@ -17,11 +17,15 @@ public class Privilege extends BaseEntity {
     private String namePrivilege;
 
     public Privilege(Long id) {
-        super(id);
+
+    }
+
+    public Privilege(String namePrivilege) {
+        this.namePrivilege = namePrivilege;
     }
 
     public Privilege(Long id, String namePrivilege) {
-        super(id);
+
         this.namePrivilege = namePrivilege;
     }
 

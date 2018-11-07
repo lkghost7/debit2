@@ -6,12 +6,14 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+
         CompanyDaoTest.class,
+        CompanDaoImplTest.class,
         DebitorDaoTest.class,
         EmailDetailDaoTest.class,
         PersonDaoTest.class,
         RegistryContractsDaoTest.class,
-        RegistryContractsDaoTest.class,
+        PrivilegeDaoImplTest.class,
         SystemUserDaoTest.class,
 })
 public class RunnableTest {
