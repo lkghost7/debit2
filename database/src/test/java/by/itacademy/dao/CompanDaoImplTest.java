@@ -22,17 +22,4 @@ public class CompanDaoImplTest extends BaseDaoTest<Company> {
         return new Company();
     }
 
-//    @Test
-//    public void save() {
-//        Company company = new Company();
-//        company.setName("Vinty-Company");
-//       DAO.save(company);
-//    }
-//
-//    @Test
-//    public void findAll() {
-//        List<Company> all = DAO.findAll();
-//        System.out.println(all);
-//    }
-//
 }
