@@ -24,3 +24,4 @@ public class ConnectionPool {
             return sessionFactory.openSession();
         }
 }
+
