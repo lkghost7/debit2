@@ -3,8 +3,8 @@ package by.itacademy.dao;
 import by.itacademy.model.Company;
 import by.itacademy.model.EmailDetail;
 import by.itacademy.model.Person;
-import org.junit.Assert;
 import org.junit.Test;
+
 public class PersonDaoTest {
 
     @Test

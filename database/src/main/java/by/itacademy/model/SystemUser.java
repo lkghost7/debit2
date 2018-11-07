@@ -1,6 +1,9 @@
 package by.itacademy.model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -22,11 +25,11 @@ public class SystemUser extends BaseEntity {
     private String familyUser;
 
     @NotEmpty
-    @Column(name = "e_mail", nullable=false)
+    @Column(name = "e_mail", nullable = false)
     private String email;
 
     @NotEmpty
-    @Column(name = "password", nullable=false)
+    @Column(name = "password", nullable = false)
     private String passwordUser;
 
     @JoinTable(name = "users_privilege",

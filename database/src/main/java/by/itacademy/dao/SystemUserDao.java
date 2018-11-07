@@ -1,10 +1,11 @@
 package by.itacademy.dao;
 
-import static by.itacademy.connection.ConnectionPool.getConnection;
 import by.itacademy.model.SystemUser;
 import org.hibernate.Session;
 
 import java.io.Serializable;
+
+import static by.itacademy.connection.ConnectionPool.getConnection;
 
 public class SystemUserDao {
     private static final Object LOCK = new Object();
@@ -49,5 +50,4 @@ public class SystemUserDao {
         session.close();
         return mySystemUser;
     }
-
 }

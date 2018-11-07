@@ -1,15 +1,17 @@
 package by.itacademy.dao;
 
-import static by.itacademy.connection.ConnectionPool.getConnection;
 import by.itacademy.model.EmailDetail;
 import org.hibernate.Session;
 
 import java.io.Serializable;
 import java.util.List;
 
+import static by.itacademy.connection.ConnectionPool.getConnection;
+
 public class EmailDetailDao {
     private static final Object LOCK = new Object();
     private static EmailDetailDao INSTANCE = null;
+
     public static EmailDetailDao getInstance() {
         if (INSTANCE == null) {
             synchronized (LOCK) {
@@ -20,6 +22,7 @@ public class EmailDetailDao {
         }
         return INSTANCE;
     }
+
     public EmailDetail findById(Long id) {
         Session session = getConnection();
         session.beginTransaction();

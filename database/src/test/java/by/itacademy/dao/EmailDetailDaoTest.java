@@ -1,14 +1,9 @@
 package by.itacademy.dao;
 
-import by.itacademy.model.Debitor;
 import by.itacademy.model.EmailDetail;
 import org.junit.Test;
 
-import javax.validation.constraints.Email;
-
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class EmailDetailDaoTest {
 

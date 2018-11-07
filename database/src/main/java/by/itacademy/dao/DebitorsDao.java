@@ -1,11 +1,12 @@
 package by.itacademy.dao;
 
-import static by.itacademy.connection.ConnectionPool.getConnection;
 import by.itacademy.model.Debitor;
 import org.hibernate.Session;
 
 import java.io.Serializable;
 import java.util.List;
+
+import static by.itacademy.connection.ConnectionPool.getConnection;
 
 public class DebitorsDao {
     private static final Object LOCK = new Object();

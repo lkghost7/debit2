@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "registry_of_contract")
 @NoArgsConstructor
 @ToString
-public class RegistryOfContract extends BaseEntity{
+public class RegistryOfContract extends BaseEntity {
 
 
     @Column(name = "number_of_contract")

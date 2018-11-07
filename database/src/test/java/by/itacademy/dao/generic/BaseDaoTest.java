@@ -8,6 +8,7 @@ import static org.junit.Assert.assertNull;
 
 public abstract class BaseDaoTest<T extends BaseEntity> {
     protected abstract BaseDao<T> getDao();
+
     protected abstract T getModel();
 
     @Test
@@ -20,7 +21,7 @@ public abstract class BaseDaoTest<T extends BaseEntity> {
     }
 
     @Test
-    public void testDelete(){
+    public void testDelete() {
         T model = getModel();
         Long id = getDao().save(model);
         getDao().delete(model);

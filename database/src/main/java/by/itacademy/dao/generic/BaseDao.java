@@ -4,7 +4,7 @@ import by.itacademy.model.BaseEntity;
 
 import java.util.List;
 
-public interface BaseDao <T extends BaseEntity> {
+public interface BaseDao<T extends BaseEntity> {
 
     Long save(T entity);
 

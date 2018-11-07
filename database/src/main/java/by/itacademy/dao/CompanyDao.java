@@ -1,15 +1,17 @@
 package by.itacademy.dao;
 
-import static by.itacademy.connection.ConnectionPool.getConnection;
 import by.itacademy.model.Company;
 import org.hibernate.Session;
 
 import java.io.Serializable;
 import java.util.List;
 
+import static by.itacademy.connection.ConnectionPool.getConnection;
+
 public class CompanyDao {
     private static final Object LOCK = new Object();
     private static CompanyDao INSTANCE = null;
+
     public static CompanyDao getInstance() {
         if (INSTANCE == null) {
             synchronized (LOCK) {
@@ -53,9 +55,3 @@ public class CompanyDao {
         session.close();
     }
 }
-
-
-
-
-
-

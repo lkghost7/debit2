@@ -1,6 +1,5 @@
 package by.itacademy.dao;
 
-import by.itacademy.connection.ConnectionPool;
 import by.itacademy.model.Person;
 import org.hibernate.Session;
 

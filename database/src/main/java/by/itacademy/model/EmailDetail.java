@@ -2,11 +2,13 @@ package by.itacademy.model;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @ToString
-@Table (name = "email_detail")
+@Table(name = "email_detail")
 @Setter
 @Getter
 @NoArgsConstructor

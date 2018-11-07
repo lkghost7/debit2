@@ -4,6 +4,7 @@ import by.itacademy.model.Debitor;
 import org.junit.Test;
 
 import java.util.List;
+
 public class DebitorDaoTest {
 
     @Test
