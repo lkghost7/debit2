@@ -57,5 +57,6 @@ public class BaseDaoImpl<T extends BaseEntity> implements BaseDao<T> {
         session.update(entity);
         session.flush();
         session.getTransaction().commit();
+
     }
 }

@@ -15,4 +15,5 @@ public interface BaseDao<T extends BaseEntity> {
     T findById(Long id);
 
     void update(T entity);
+
 }
